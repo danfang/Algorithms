@@ -1,4 +1,6 @@
 package problem16;
+
+import java.math.BigInteger;
 /*
  Power Digit Sum
  Problem 16
@@ -8,6 +10,17 @@ package problem16;
 
 public class PowerDigitSum {
    public static void main(String[] args) {
-
+      System.out.println(digitSum(2, 1000));
+   }
+   
+   private static int digitSum(int base, int pow) {
+      BigInteger bigBase = BigInteger.valueOf(base);
+      BigInteger result = bigBase.pow(pow);
+      String s = result.toString();
+      int sum = 0;
+      for (int i = 0; i < s.length(); i++) {
+         sum += Integer.parseInt("" + s.charAt(i));
+      }
+      return sum;
    }
 }

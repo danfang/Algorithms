@@ -31,13 +31,13 @@ Problem 13 - solved 1/7/13
 
 Problem 14 - solved 1/7/13
 
-Problem 15 - solved 4/6/14
+Problem 15 - solved 4/5/14
 
-Problem 16 - TBD
+Problem 16 - solved 4/6/14
 
-Problem 17 - solved 1/7/13, updated 4/6/14
+Problem 17 - solved 1/7/13, updated 4/5/14
 
-Problem 18/67 - solved 4/6/14
+Problem 18/67 - solved 4/5/14
 
 Problem 19 - TBD
 

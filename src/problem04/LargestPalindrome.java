@@ -31,7 +31,7 @@ public class LargestPalindrome {
       }
       if (s2.equals(s)) {
          return true;
-      } 
+      }
       return false;
    }
 }

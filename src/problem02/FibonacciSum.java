@@ -14,7 +14,7 @@ public class FibonacciSum {
    public static void main(String[] args) {
       System.out.println(sum(4000000));
    }
-   
+
    private static int sum(int max) {
       int first = 1;
       int second = 1;

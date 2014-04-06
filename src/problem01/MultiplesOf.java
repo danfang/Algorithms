@@ -12,10 +12,10 @@ public class MultiplesOf {
    public static void main(String[] args) {
       System.out.println(sumMultiples(3, 5, 1000));
    }
-   
+
    private static int sumMultiples(int first, int second, int max) {
       int sum = 0;
-      for(int i = 0; i < max; i++) {
+      for (int i = 0; i < max; i++) {
          if (i % first == 0 || i % second == 0) {
             sum += i;
          }
