@@ -3,9 +3,9 @@ Algorithms
 
 Project Euler done in Java
 
-Problem 1 - solved 1/6/13 (UNAVAILABLE)
+Problem 1 - solved 1/6/13
 
-Problem 2 - solved 1/6/13 (UNAVAILABLE)
+Problem 2 - solved 1/6/13
 
 Problem 3 - solved 1/6/13
 
@@ -21,7 +21,7 @@ Problem 8 - solved 1/6/13
 
 Problem 9 - solved 1/6/13
 
-Problem 10 - solved 1/6/13 (UNAVAILABLE)
+Problem 10 - solved 1/6/13
 
 Problem 11 - solved 1/7/13
 
@@ -31,13 +31,13 @@ Problem 13 - solved 1/7/13
 
 Problem 14 - solved 1/7/13
 
-Problem 15 - TBD
+Problem 15 - solved 4/6/14
 
 Problem 16 - TBD
 
-Problem 17 - solved 1/7/13
+Problem 17 - solved 1/7/13, updated 4/6/14
 
-Problem 18 - TBD
+Problem 18/67 - solved 4/6/14
 
 Problem 19 - TBD
 

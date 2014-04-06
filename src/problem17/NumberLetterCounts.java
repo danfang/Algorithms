@@ -1,5 +1,9 @@
 package problem17;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 /*
 Number letter counts
 Problem 17
@@ -13,63 +17,55 @@ The use of "and" when writing out numbers is in compliance with British usage.
 */
 
 public class NumberLetterCounts {
+
+   private static Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+   static {
+      // 0 ... 10
+      map.put(0, 0); map.put(1, 3); map.put(2, 3);map.put(3, 5); map.put(4, 4); map.put(5, 4);
+      map.put(6, 3);map.put(7, 5); map.put(8, 5); map.put(9, 4); map.put(10, 3);
+      // 11 ... 20
+      map.put(11, 6); map.put(12, 6); map.put(13, 8); map.put(14, 8); map.put(15, 7);
+      map.put(16, 7); map.put(17, 9); map.put(18, 8); map.put(19, 8); map.put(20, 6);
+      // 30 ... 90
+      map.put(30, 6); map.put(40, 5); map.put(50, 5); map.put(60, 5);
+      map.put(70, 7); map.put(80, 6); map.put(90, 6);
+      // 100, 1000
+   }
+   
    public static void main(String[] args) {
-      int[] list = new int[1001];
-      for (int i = 1; i < 10; i++) {
-         if (i == 1 || i == 2 || i == 6) { // one, two, six have three letters
-            list[i] = 3;
-         } else if (i == 4 || i == 5 || i == 9) { // four, five, nine have four letters
-            list[i] = 4;
-         } else { // seven has five letters
-            list[i] = 5;
-         }
-      }
-      for (int i = 11; i < 20; i++) {
-         if (i == 11 || i == 12) { // eleven and twelve have six letters
-            list[i] = 6;
-         } else if (i == 15 || i == 16) { // fifteen and sixteen have seven letters
-            list[i] = 7;
-         } else if (i == 13 || i == 14 || i == 18 || i == 19) { // thirteen, fourteen,
-                                                                // eighteen, nineteen have
-                                                                // eight letters
-            list[i] = 8;
-         } else { // seventeen has nine letters
-            list[i] = 9;
-         }
-      }
-      for (int i = 10; i < 100; i += 10) {
-         if (i == 10) { // ten has three letters
-            list[i] = 3;
-         } else if (i == 40 || i == 50 || i == 60) { // forty, fifty, sixty have five
-                                                     // letters
-            list[i] = 5;
-         } else if (i == 30 || i == 20 || i == 80 || i == 90) { // thirty, twenty, eighty,
-                                                                // ninety have six letters
-            list[i] = 6;
-         } else { // seventy has seven letters
-            list[i] = 7;
-         }
-      }
-      for (int i = 20; i < 100; i++) {
-         list[i] += list[i % 10]; // adding the "one's" digit counts to numbers between 20
-                                  // and 99 that end in 1-9
-         if (i % 10 != 0) {
-            list[i] += list[i - (i % 10)]; // adding twenty, thirty, forty, etc to all
-                                           // numbers that end in 1-9
-         }
-      }
-      for (int i = 100; i < 1000; i++) {
-         if (i % 100 != 0) {
-            list[i] += 10 + list[i / 100] + list[i % 100]; // [] + hundred and + []
-         } else {
-            list[i] += 7 + list[i / 100]; // [] + hundred
-         }
-      }
-      list[1000] = 11; // one thousand has eleven letters
+      Scanner input = new Scanner(System.in);
+      System.out.print("Print the number letter count up to: ");
+      System.out.println("Sum: " + numberLetterSum(input.nextInt()));
+   }
+   
+   // counts the number letter sum up to one million, given n
+   private static int numberLetterSum(int n) {
       int sum = 0;
-      for (int i = 0; i < 1001; i++) {
-         sum += list[i];
+      for (int i = 1; i <= n; i++) {
+         int value;
+         if (i < 20) {           // 1 - 19
+            value = map.get(i);
+         } else if (i < 100) {   // 20 - 99
+            value = map.get(i - (i % 10)) + map.get(i % 10);
+            map.put(i, value);
+         } else if (i < 1000) {  // 100 - 999
+            if (i % 100 != 0) {
+               value = map.get(i / 100) + "hundred".length() + "and".length() + map.get(i % 100);
+            } else {             // 100, 200...
+               value = map.get(i / 100) + "hundred".length();
+            }
+            map.put(i, value);
+            
+         } else { // 1000 - 999999
+            if (i % 1000 != 0) {
+               value = map.get(i / 1000) + "thousand".length() + "and".length() + map.get(i % 1000);
+            } else {
+               value = map.get(i / 1000) + "thousand".length();
+            }
+            map.put(i, value);
+         }
+         sum += value;
       }
-      System.out.print(sum);
+      return sum;
    }
 }
