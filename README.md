@@ -39,7 +39,11 @@ Problem 17 - solved 1/7/13, updated 4/5/14
 
 Problem 18/67 - solved 4/5/14
 
-Problem 19 - TBD
+Problem 19 - solved 4/6/14
 
-Problem 20 - TBD
+Problem 20 - solved 4/6/14
+
+Problem 21 - solved 4/6/14
+
+Problem 22 - solved 4/6/14
 
