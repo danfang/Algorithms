@@ -19,27 +19,28 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million.
 */
 
-public class longestCollatz{
-	public static void main(String[] args){
-	int longestChainCount = 0, startingValue = 999999;
-	for(int i = 999999; i >= 1; i--){
-		if(returnLength(i) > longestChainCount){
-			longestChainCount = returnLength(i);
-			startingValue = i;
-		}
-	}
-	System.out.println(startingValue + " has a chain length of " + longestChainCount);
-	}
-	public static int returnLength(long n){
-		int i = 1;
-		while(n != 1){
-			if(n % 2 == 0){
-				n /= 2;
-			} else {
-				n = 3*n + 1;
-			}
-			i++;
-		}
-		return i;
-	}
+public class LongestCollatz {
+   public static void main(String[] args) {
+      int longestChainCount = 0, startingValue = 999999;
+      for (int i = 999999; i >= 1; i--) {
+         if (returnLength(i) > longestChainCount) {
+            longestChainCount = returnLength(i);
+            startingValue = i;
+         }
+      }
+      System.out.println(startingValue + " has a chain length of " + longestChainCount);
+   }
+
+   public static int returnLength(long n) {
+      int i = 1;
+      while (n != 1) {
+         if (n % 2 == 0) {
+            n /= 2;
+         } else {
+            n = 3 * n + 1;
+         }
+         i++;
+      }
+      return i;
+   }
 }

@@ -12,7 +12,7 @@ The product of these numbers is 26 x 63 x 78 x 14 = 1788696.
 What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20x20 grid?
 */
 
-public class gridProduct{
+public class GridProduct{
 	public static void main(String[] args){
 		int[][] gridArray = 
 			{{8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 04, 5, 7, 78, 52, 12, 50, 77, 91, 8},
@@ -37,55 +37,55 @@ public class gridProduct{
 			{01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48}};
 		// putting the numbers into gridArray
 		
-		int maxProduct = 0;
-		// Left to right multiplication
-		for(int i = 0; i < 20; i++){
-			for(int j = 0; j < 17; j++){
-				int product = 1;
-				for(int k = 0; k < 4; k++){
-					product = product * gridArray[i][j + k];
-				}
-				if(product > maxProduct){
-						maxProduct = product;
-				}
-			}
-		}
-		// Up and down multiplcation
-		for(int i = 0; i < 17; i++){
-			for(int j = 0; j < 20; j++){
-				int product = 1;
-				for(int k = 0; k < 4; k++){
-					product = product * gridArray[i + k][j];
-				}
-				if(product > maxProduct){
-						maxProduct = product;
-				}
-			}
-		}
-		// Diagonal multiplication (\)
-		for(int i = 0; i < 17; i++){
-			for(int j = 0; j < 17; j++){
-				int product = 1;
-				for(int k = 0; k < 4; k++){
-					product = product * gridArray[i + k][j + k];
-				}
-				if(product > maxProduct){
-						maxProduct = product;
-				}
-			}
-		}
-		// Diagonal multiplication(/)
-		for(int i = 0; i < 17; i++){
-			for(int j = 3; j < 20; j++){
-				int product = 1;
-				for(int k = 0; k < 4; k++){
-					product = product * gridArray[i + k][j-k];
-				}
-				if(product > maxProduct){
-					maxProduct = product;
-				}
-			}
-		}
-		System.out.println(maxProduct);
-	} // end of main method
+      int maxProduct = 0;
+      // Left to right multiplication
+      for (int i = 0; i < 20; i++) {
+         for (int j = 0; j < 17; j++) {
+            int product = 1;
+            for (int k = 0; k < 4; k++) {
+               product = product * gridArray[i][j + k];
+            }
+            if (product > maxProduct) {
+               maxProduct = product;
+            }
+         }
+      }
+      // Up and down multiplcation
+      for (int i = 0; i < 17; i++) {
+         for (int j = 0; j < 20; j++) {
+            int product = 1;
+            for (int k = 0; k < 4; k++) {
+               product = product * gridArray[i + k][j];
+            }
+            if (product > maxProduct) {
+               maxProduct = product;
+            }
+         }
+      }
+      // Diagonal multiplication (\)
+      for (int i = 0; i < 17; i++) {
+         for (int j = 0; j < 17; j++) {
+            int product = 1;
+            for (int k = 0; k < 4; k++) {
+               product = product * gridArray[i + k][j + k];
+            }
+            if (product > maxProduct) {
+               maxProduct = product;
+            }
+         }
+      }
+      // Diagonal multiplication(/)
+      for (int i = 0; i < 17; i++) {
+         for (int j = 3; j < 20; j++) {
+            int product = 1;
+            for (int k = 0; k < 4; k++) {
+               product = product * gridArray[i + k][j - k];
+            }
+            if (product > maxProduct) {
+               maxProduct = product;
+            }
+         }
+      }
+      System.out.println(maxProduct);
+   } // end of main method
 } // end of gridProduct

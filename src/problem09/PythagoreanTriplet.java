@@ -1,4 +1,4 @@
-package problem9;
+package problem09;
 
 /*
 Special Pythagorean triplet
@@ -12,7 +12,7 @@ There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.
 */
 
-public class pythagoreanTriplet {
+public class PythagoreanTriplet {
    public static void main(String[] args) {
       int a = 0, b = 0, c = 0;
       while (a + b + c != 1000) {

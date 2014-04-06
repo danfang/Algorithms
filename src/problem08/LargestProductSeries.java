@@ -1,4 +1,4 @@
-package problem8;
+package problem08;
 
 /*
 Largest product in a series
@@ -9,7 +9,7 @@ Find the greatest product of five consecutive digits in the 1000-digit number.
 
 */
 
-public class largestProductSeries{
+public class LargestProductSeries{
 	public static void main(String[] args){
 		String s = "7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843";
 		s+= "858615607891129494954595017379583319528532088055112540698747158523863050715693290963295227443043557";

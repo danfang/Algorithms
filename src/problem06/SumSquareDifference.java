@@ -1,4 +1,4 @@
-package problem6;
+package problem06;
 
 /*
 Sum square difference
@@ -14,17 +14,17 @@ Hence the difference between the sum of the squares of the first ten natural num
 Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 */
 
-public class sumSquareDifference{
-	public static final int NUMBER_OF_ITERATIONS = 100;
-	public static void main(String[] args){
-	int sumOfSquares = 0, sum = 0;
-	for(int i = 1; i <= NUMBER_OF_ITERATIONS; i++){
-		sumOfSquares += (i * i);
-	}
-	for(int i = 1; i <= NUMBER_OF_ITERATIONS; i++){
-		sum += i;
-	}
-	System.out.print((sum*sum) - sumOfSquares);
-	
-	}
+public class SumSquareDifference {
+   public static final int NUMBER_OF_ITERATIONS = 100;
+
+   public static void main(String[] args) {
+      int sumOfSquares = 0, sum = 0;
+      for (int i = 1; i <= NUMBER_OF_ITERATIONS; i++) {
+         sumOfSquares += (i * i);
+      }
+      for (int i = 1; i <= NUMBER_OF_ITERATIONS; i++) {
+         sum += i;
+      }
+      System.out.print((sum * sum) - sumOfSquares);
+   }
 }

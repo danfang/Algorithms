@@ -20,26 +20,27 @@ We can see that 28 is the first triangle number to have over five divisors.
 
 What is the value of the first triangle number to have over five hundred divisors?
 */
-public class triangleNumber{
-	public static void main(String[] args){
-		int divisorCount  = 0, triangleCount = 1, testTriangle = 0;
-		while(divisorCount < 501){
-			divisorCount = 0;
-			testTriangle = generateTriangle(triangleCount);
-			for(int i = 1; i * i <= testTriangle; i++){
-				if(testTriangle % i == 0){
-					divisorCount+= 2;
-				}
-			}
-			triangleCount++;
-		}
-		System.out.print(testTriangle);
-	}
-	public static int generateTriangle(int number){
-		int sum = 0;
-		for(int i = 1; i <= number; i++){
-			sum+=i;
-		}
-		return sum;
-	}
-}	
+public class TriangleNumber {
+   public static void main(String[] args) {
+      int divisorCount = 0, triangleCount = 1, testTriangle = 0;
+      while (divisorCount < 501) {
+         divisorCount = 0;
+         testTriangle = generateTriangle(triangleCount);
+         for (int i = 1; i * i <= testTriangle; i++) {
+            if (testTriangle % i == 0) {
+               divisorCount += 2;
+            }
+         }
+         triangleCount++;
+      }
+      System.out.print(testTriangle);
+   }
+
+   public static int generateTriangle(int number) {
+      int sum = 0;
+      for (int i = 1; i <= number; i++) {
+         sum += i;
+      }
+      return sum;
+   }
+}
