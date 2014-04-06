@@ -3,7 +3,7 @@ Algorithms
 
 Project Euler done in Java
 
-Problem 1 - solved 1/6/13
+[Problem 1](src/problem01/MultiplesOf.java) - solved 1/6/13
 
 Problem 2 - solved 1/6/13
 
