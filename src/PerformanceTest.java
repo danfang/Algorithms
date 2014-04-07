@@ -24,16 +24,18 @@ import problem22.NameScores;
 import problem23.NonAbundantSums;
 import problem24.LexicographicPermutations;
 import problem27.QuadraticPrimes;
+import problem28.SpiralDiagonals;
+import problem29.DistinctPowers;
 
 /*
  This class tests the speed of each algorithm used
  */
 
 public class PerformanceTest {
-   public static final int COMPLETED_PROBLEMS = 27;
+   public static final int COMPLETED_PROBLEMS = 28;
    
    public static void main(String[] args) throws FileNotFoundException {
-      runClass(27);
+      runClass(29);
    }
    
    private static void runAll() throws FileNotFoundException {
@@ -83,6 +85,7 @@ public class PerformanceTest {
             break;
          case 18: 
             MaximumPathSum.main(new String[] {"src/problem18/triangle.txt", "15"});
+            System.out.println("Time elapsed: " + (System.currentTimeMillis() - elapsed) + " ms\n");
             System.out.println("Problem number: 67");
             MaximumPathSum.main(new String[] {"src/problem18/bigTriangle.txt", "100"});
             break;
@@ -99,6 +102,10 @@ public class PerformanceTest {
          case 24: LexicographicPermutations.main(null);
             break;
          case 27: QuadraticPrimes.main(null);
+            break;
+         case 28: SpiralDiagonals.main(null);
+            break;
+         case 29: DistinctPowers.main(null);
             break;
          default:
             break;

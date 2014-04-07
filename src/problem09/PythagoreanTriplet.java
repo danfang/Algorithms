@@ -25,8 +25,8 @@ public class PythagoreanTriplet {
                         a = j;
                         b = k;
                         if (a + b + c == 1000) {
-                           System.out.println(a + " " + b + " " + c);
-                           System.out.println(a * b * c);
+                           System.out.println("a = " + a + " b = " + b + " c = " + c);
+                           System.out.println("a * b * c = " + a * b * c);
                            k = j;
                            j = c;
                            cSquared = 1000001;

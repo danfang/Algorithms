@@ -33,7 +33,7 @@ public class TriangleNumber {
          }
          triangleCount++;
       }
-      System.out.print(testTriangle);
+      System.out.println(testTriangle);
    }
 
    public static int generateTriangle(int number) {

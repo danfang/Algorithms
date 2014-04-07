@@ -33,20 +33,18 @@ public class QuadraticPrimes {
       int maxB = 0;
       for (int a = -MAX + 1; a < MAX; a++) {
          for (int b = -MAX + 1; b < MAX; b++) {
-            int chain = 0;
             int n = 0;
             while (PrimeNumbers.primeTest((int) Math.pow(n, 2) + (a * n) + b)) {
-               chain++;
                n++;
             }
-            if (chain > maxChain) {
-               maxChain = chain;
+            if (n > maxChain) {
+               maxChain = n;
                maxA = a;
                maxB = b;
             }
          }
       }
-      System.out.println("Max chain of: " + maxChain + " a = " + maxA + " b = " + maxB);
+      System.out.println("Max chain of: " + maxChain + "\na = " + maxA + " b = " + maxB);
       System.out.println("a * b = " + maxA * maxB);
    }
 }

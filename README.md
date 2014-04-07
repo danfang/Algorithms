@@ -53,3 +53,7 @@ Project Euler done in Java: [Performance Testing](src/PerformanceTest.java) - ad
 
 [Problem 27](src/problem27/QuadraticPrimes.java) - solved 4/6/14
 
+[Problem 28](src/problem28/SpiralDiagonals.java) - solved 4/6/14
+
+[Problem 29](src/problem29/DistinctPowers.java) - solved 4/6/14
+

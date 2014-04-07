@@ -37,6 +37,6 @@ public class LargestProductSeries{
          }
          product = 1;
       }
-      System.out.print(largestProduct);
+      System.out.println(largestProduct);
    }
 }
