@@ -26,16 +26,17 @@ import problem24.LexicographicPermutations;
 import problem27.QuadraticPrimes;
 import problem28.SpiralDiagonals;
 import problem29.DistinctPowers;
+import problem30.DigitFifthPowers;
 
 /*
  This class tests the speed of each algorithm used
  */
 
 public class PerformanceTest {
-   public static final int COMPLETED_PROBLEMS = 28;
+   public static final int COMPLETED_PROBLEMS = 30;
    
    public static void main(String[] args) throws FileNotFoundException {
-      runClass(29);
+      runClass(30);
    }
    
    private static void runAll() throws FileNotFoundException {
@@ -106,6 +107,8 @@ public class PerformanceTest {
          case 28: SpiralDiagonals.main(null);
             break;
          case 29: DistinctPowers.main(null);
+            break;
+         case 30: DigitFifthPowers.main(null);
             break;
          default:
             break;
