@@ -12,11 +12,19 @@ public class MaximumPathSum {
    public static int[][] triangle;
    
    public static void main(String[] args) throws FileNotFoundException {
-      Scanner inputScanner = new Scanner(System.in);
-      System.out.print("Enter the file of the triangle: ");
-      Scanner fileScanner = new Scanner(new File(inputScanner.nextLine()));
-      System.out.print("Enter the size of the triangle (number of rows): ");
-      int triangleSize = inputScanner.nextInt();
+      Scanner fileScanner;
+      int triangleSize;
+
+      if (args.length == 0) {
+         Scanner inputScanner = new Scanner(System.in);
+         System.out.print("Enter the file of the triangle: ");
+         fileScanner = new Scanner(new File(inputScanner.nextLine()));
+         System.out.print("Enter the size of the triangle (number of rows): ");
+         triangleSize = inputScanner.nextInt();
+      } else {
+         fileScanner = new Scanner(new File(args[0]));
+         triangleSize = Integer.parseInt(args[1]);
+      }
 
       // parsing the triangle into a 2D array
       triangle = new int[triangleSize][triangleSize];

@@ -16,28 +16,37 @@ public class PrimeNumbers {
 
    public static void main(String[] args) {
       boolean run = true;
-      while (run) {
-         printInstructions();
-         String choice = scan.next();
-         System.out.println();
-         if (choice.equalsIgnoreCase("t")) {
-            System.out.print("Please enter a number to test: ");
-            int testNumber = scan.nextInt();
-            System.out.println("Is " + testNumber + " a prime number? " + primeTest(testNumber));
-         } else if (choice.equalsIgnoreCase("f")) {
-            System.out.print("Which prime number do you wish to find?(#) ");
-            int numberOfPrimes = scan.nextInt();
-            int answer = findPrime(numberOfPrimes);
-            System.out.println(answer + " is the " + numberOfPrimes
-                  + numberType(numberOfPrimes) + " prime number. ");
-         } else if (choice.equalsIgnoreCase("s")) {
-            System.out.println("Find the sum of all primes below: ");
-            int max = scan.nextInt();
-            System.out.println("Answer: " + findPrimeSumUnderValue(max));
-         } else if (choice.equalsIgnoreCase("q")) {
-            run = false;
-         } else {
-            System.out.println("I'm sorry. Please choose one of the options.");
+      if (args.length == 0) {
+         while (run) {
+            printInstructions();
+            String choice = scan.next();
+            System.out.println();
+            if (choice.equalsIgnoreCase("t")) {
+               System.out.print("Please enter a number to test: ");
+               int testNumber = scan.nextInt();
+               System.out.println("Is " + testNumber + " a prime number? "
+                     + primeTest(testNumber));
+            } else if (choice.equalsIgnoreCase("f")) {
+               System.out.print("Which prime number do you wish to find?(#) ");
+               int numberOfPrimes = scan.nextInt();
+               int answer = findPrime(numberOfPrimes);
+               System.out.println(answer + " is the " + numberOfPrimes
+                     + numberType(numberOfPrimes) + " prime number. ");
+            } else if (choice.equalsIgnoreCase("s")) {
+               System.out.println("Find the sum of all primes below: ");
+               int max = scan.nextInt();
+               System.out.println("Answer: " + findPrimeSumUnderValue(max));
+            } else if (choice.equalsIgnoreCase("q")) {
+               run = false;
+            } else {
+               System.out.println("I'm sorry. Please choose one of the options.");
+            }
+         }
+      } else {
+         if (args[0].equals("0")) { // problem 7
+            System.out.println(findPrime(10001));
+         } else if (args[0].equals("1")) {
+            System.out.println(findPrimeSumUnderValue(2000000));
          }
       }
    }

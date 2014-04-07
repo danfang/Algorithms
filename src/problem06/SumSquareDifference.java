@@ -26,6 +26,6 @@ public class SumSquareDifference {
          sumOfSquares += (i * i);
          sum += i;
       }
-      System.out.print((sum * sum) - sumOfSquares);
+      System.out.println((sum * sum) - sumOfSquares);
    }
 }

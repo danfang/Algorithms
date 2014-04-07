@@ -1,7 +1,7 @@
 Algorithms
 ==========
 
-Project Euler done in Java
+Project Euler done in Java: [Performance Testing](src/PerformanceTest) - added 1/6/14
 
 [Problem 1](src/problem01/MultiplesOf.java) - solved 1/6/13
 
@@ -46,4 +46,6 @@ Project Euler done in Java
 [Problem 21](src/problem21/AmicableNumbers.java) - solved 4/6/14
 
 [Problem 22](src/problem22/NameScores.java) + [Names](src/problem22/names.txt) - solved 4/6/14
+
+[Problem 23](src/problem23/NonAbundantSums.java) - solved 4/6/14
 

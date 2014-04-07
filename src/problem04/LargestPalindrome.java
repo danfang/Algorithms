@@ -21,7 +21,7 @@ public class LargestPalindrome {
             }
          }
       }
-      System.out.print(largestPalindrome);
+      System.out.println(largestPalindrome);
    }
 
    public static boolean palindromeTest(String s) {

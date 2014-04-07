@@ -23,7 +23,7 @@ public class AmicableNumbers {
    }
 
    // returns the sum of all divisors < n
-   private static int getDivisorSum(int n) {
+   public static int getDivisorSum(int n) {
       Set<Integer> divisors = new TreeSet<Integer>();
       int root = (int) Math.ceil(Math.sqrt(n));
       for (int i = 1; i < root + 1; i++) {

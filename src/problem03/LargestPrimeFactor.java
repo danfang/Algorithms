@@ -19,7 +19,7 @@ public class LargestPrimeFactor {
          }
          testNumber += 2;
       }
-      System.out.print(largestFactor);
+      System.out.println(largestFactor);
    }
 
    public static boolean primeTest(int number) {

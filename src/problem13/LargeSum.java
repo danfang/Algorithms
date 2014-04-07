@@ -29,10 +29,11 @@ public class LargeSum{
          remainderHolder[i] = digitHolder % 10; // the remainder
          digitHolder /= 10; // the sum to be carried over
       }
-      System.out.print("The total sum is " + digitHolder);
+      System.out.print(digitHolder);
       for (int i = 0; i < 50; i++) {
          System.out.print(remainderHolder[i]);
       }
+      System.out.println();
    }
 
    public static void putIntoArray(String[] s, int[][] list, Scanner scan) {

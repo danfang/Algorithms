@@ -24,6 +24,6 @@ public class SmallestMultiple {
          }
          i += 20;
       }
-      System.out.print(i - 20);
+      System.out.println(i - 20);
    }
 }

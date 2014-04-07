@@ -33,9 +33,13 @@ public class NumberLetterCounts {
    }
    
    public static void main(String[] args) {
-      Scanner input = new Scanner(System.in);
-      System.out.print("Print the number letter count up to: ");
-      System.out.println("Sum: " + numberLetterSum(input.nextInt()));
+      if (args.length == 0) {
+         Scanner input = new Scanner(System.in);
+         System.out.print("Print the number letter count up to: ");
+         System.out.println("Sum: " + numberLetterSum(input.nextInt()));
+      } else {
+         System.out.println("Sum: " + numberLetterSum(Integer.parseInt(args[0])));
+      }
    }
    
    // counts the number letter sum up to one million, given n
