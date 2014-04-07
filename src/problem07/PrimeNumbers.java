@@ -52,7 +52,7 @@ public class PrimeNumbers {
    }
 
    // returns whether or not a given number is prime
-   private static boolean primeTest(int number) {
+   public static boolean primeTest(int number) {
       if (number == 2) {
          return true;
       }

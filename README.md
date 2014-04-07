@@ -49,3 +49,7 @@ Project Euler done in Java: [Performance Testing](src/PerformanceTest.java) - ad
 
 [Problem 23](src/problem23/NonAbundantSums.java) - solved 4/6/14
 
+[Problem 24](src/problem24/LexicographicPermutations.java) - solved 4/6/14
+
+[Problem 27](src/problem27/QuadraticPrimes.java) - solved 4/6/14
+

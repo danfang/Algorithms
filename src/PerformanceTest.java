@@ -22,16 +22,18 @@ import problem20.FactorialDigitSum;
 import problem21.AmicableNumbers;
 import problem22.NameScores;
 import problem23.NonAbundantSums;
+import problem24.LexicographicPermutations;
+import problem27.QuadraticPrimes;
 
 /*
  This class tests the speed of each algorithm used
  */
 
 public class PerformanceTest {
-   public static final int COMPLETED_PROBLEMS = 23;
+   public static final int COMPLETED_PROBLEMS = 27;
    
    public static void main(String[] args) throws FileNotFoundException {
-      runAll();
+      runClass(27);
    }
    
    private static void runAll() throws FileNotFoundException {
@@ -93,6 +95,12 @@ public class PerformanceTest {
          case 22: NameScores.main(null);
             break;
          case 23: NonAbundantSums.main(null);
+            break;
+         case 24: LexicographicPermutations.main(null);
+            break;
+         case 27: QuadraticPrimes.main(null);
+            break;
+         default:
             break;
       }
       System.out.println("Time elapsed: " + (System.currentTimeMillis() - elapsed) + " ms");

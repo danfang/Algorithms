@@ -10,8 +10,8 @@ package problem15;
 
 public class LatticePaths {
    
-   public static final int GRID_LIMIT = 20;
-   public static long[][] cache;
+   private static final int GRID_LIMIT = 20;
+   private static long[][] cache;
 
    public static void main(String[] args) {
       cache = new long[GRID_LIMIT + 1][GRID_LIMIT + 1];
