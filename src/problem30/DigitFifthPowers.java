@@ -18,7 +18,7 @@ package problem30;
   of their digits.
  */
 
-public class DigitFifthPowers /*extends JFrame*/ {
+public class DigitFifthPowers /*extends JFrame */{
    
    //private static XYSeriesCollection dataset;
 
@@ -35,10 +35,11 @@ public class DigitFifthPowers /*extends JFrame*/ {
          for (int j = 0; j < s.length(); j++) {
             sum -= Math.pow(Integer.parseInt("" + s.charAt(j)), 5);
          }
-         //if (i % 100 == 0) {
+         //if (i % 5 == 0) {
          //   data.add(i, sum);
          //}
          if (sum == 0) {
+            System.out.println(i);
             totalSum += i;
          }
       }
@@ -48,7 +49,7 @@ public class DigitFifthPowers /*extends JFrame*/ {
       //showGraph();
    }
 
-   /*
+/*   
    private static void showGraph() {
       final JFreeChart chart = createChart(dataset);
       final ChartPanel chartPanel = new ChartPanel(chart);
@@ -60,9 +61,9 @@ public class DigitFifthPowers /*extends JFrame*/ {
    }
 
    private static JFreeChart createChart(final XYDataset dataset) {
-      final JFreeChart chart = ChartFactory.createScatterPlot("Title", // chart title
-            "X", // x axis label
-            "Y", // y axis label
+      final JFreeChart chart = ChartFactory.createScatterPlot("Equilibrium Plot", // chart title
+            "Number", // x axis label
+            "Value - Fifth powers", // y axis label
             dataset, // data
             PlotOrientation.VERTICAL, true, // include legend
             true, // tooltips
@@ -70,7 +71,10 @@ public class DigitFifthPowers /*extends JFrame*/ {
             );
       XYPlot plot = (XYPlot) chart.getPlot();
       XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
-      renderer.setSeriesLinesVisible(0, true);
+      renderer.setSeriesLinesVisible(0, false);
+      renderer.setBaseShapesFilled(false);
+      Shape cross = ShapeUtilities.createDiamond(.3f);
+      renderer.setSeriesShape(0, cross);
       plot.setRenderer(renderer);
       return chart;
    } */

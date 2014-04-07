@@ -8,8 +8,9 @@ Work out the first ten digits of the sum of the following one-hundred 50-digit n
 The numbers are stored in a file called "list.txt"
 */
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
-import java.io.*;
 public class LargeSum{
    
 	public static void main(String[] args) throws FileNotFoundException{
