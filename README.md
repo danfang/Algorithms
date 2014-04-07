@@ -1,7 +1,7 @@
 Algorithms
 ==========
 
-Project Euler done in Java: [Performance Testing](src/PerformanceTest) - added 1/6/14
+Project Euler done in Java: [Performance Testing](src/PerformanceTest.java) - added 1/6/14
 
 [Problem 1](src/problem01/MultiplesOf.java) - solved 1/6/13
 
