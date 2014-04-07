@@ -57,4 +57,4 @@ Project Euler done in Java: [Performance Testing](src/PerformanceTest.java) - ad
 
 [Problem 29](src/problem29/DistinctPowers.java) - solved 4/6/14
 
-[Problem 30](src/problem30/DigitFifthPowers.java) - solved 4/6/14
+[Problem 30](src/problem30/DigitFifthPowers.java) + [Graphical Representation](bin/problem30/Scatterplot Analysis.png) - solved 4/6/14
