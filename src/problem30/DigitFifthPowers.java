@@ -39,7 +39,6 @@ public class DigitFifthPowers /*extends JFrame */{
          //   data.add(i, sum);
          //}
          if (sum == 0) {
-            System.out.println(i);
             totalSum += i;
          }
       }

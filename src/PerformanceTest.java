@@ -1,4 +1,5 @@
-import java.io.FileNotFoundException;
+
+import java.lang.reflect.Method;
 
 import problem01.MultiplesOf;
 import problem02.FibonacciSum;
@@ -23,96 +24,75 @@ import problem21.AmicableNumbers;
 import problem22.NameScores;
 import problem23.NonAbundantSums;
 import problem24.LexicographicPermutations;
+import problem25.Fibonacci1000;
 import problem27.QuadraticPrimes;
 import problem28.SpiralDiagonals;
 import problem29.DistinctPowers;
 import problem30.DigitFifthPowers;
+import problem43.SubstringDivisibility;
 
 /*
  This class tests the speed of each algorithm used
  */
 
 public class PerformanceTest {
-   public static final int COMPLETED_PROBLEMS = 30;
+   private static final Object[] classes = {
+         // PROBLEMS 1 - 9
+         new MultiplesOf(),       new FibonacciSum(),         new LargestPrimeFactor(),
+         new LargestPalindrome(), new SmallestMultiple(),     new SumSquareDifference(),
+         new PrimeNumbers(),      new LargestProductSeries(), new PythagoreanTriplet(),
+         // PROBLEMS 10 - 18
+         new PrimeNumbers(),      new GridProduct(),          new TriangleNumber(), 
+         new LargeSum(),          new LongestCollatz(),       new LatticePaths(), 
+         new PowerDigitSum(),     new NumberLetterCounts(),   new MaximumPathSum(), 
+         // PROBLEMS 19 - 27
+         new CountingSundays(),   new FactorialDigitSum(),    new AmicableNumbers(),        
+         new NameScores(),        new NonAbundantSums(),      new LexicographicPermutations(), 
+         new Fibonacci1000(),     null,                       new QuadraticPrimes(), 
+         // PROBLEMS 28 - 36
+         new SpiralDiagonals(),   new DistinctPowers(),       new DigitFifthPowers()
+      };
    
-   public static void main(String[] args) throws FileNotFoundException {
-      runClass(30);
+   // indexes correspond to problem number (not 0-based)
+   private static String[][] arguments = new String[300][];
+   static {
+      arguments[7] = new String[] {"0"};
+      arguments[10] = new String[] {"1"};
+      arguments[17] = new String[] {"0"};
+      arguments[18] = new String[] { "src/problem18/triangle.txt", "15" };
    }
    
-   private static void runAll() throws FileNotFoundException {
-      for(int i = 1; i <= COMPLETED_PROBLEMS; i++) {
-         runClass(i);
+   public static void main(String[] args) throws Exception {
+      runAll();
+      //run(15);
+      //run(new SubstringDivisibility(), null);
+   }
+
+   private static void runAll() throws Exception {
+      for (int i = 1; i <= classes.length; i++) {
+         run(i);
+      }
+   }
+
+   private static void run(int number) throws Exception {
+      if (classes[number - 1] != null) {
+         System.out.println("Problem number: " + number);
+         Class<?> c = classes[number - 1].getClass();
+         Method m = c.getMethod("main", String[].class);
+         double elapsed = System.currentTimeMillis();
+         if (arguments[number] == null) {
+            m.invoke(classes[number - 1], (Object) new String[] {});
+         } else {
+            m.invoke(classes[number - 1], (Object) arguments[number]);
+         }
+         System.out.println("Time elapsed: " + (System.currentTimeMillis() - elapsed + 1) + " ms");
          System.out.println();
       }
    }
-   
-   private static void runClass(int number) throws FileNotFoundException {
+
+   private static void run(Object o, String[] args) throws Exception {
       double elapsed = System.currentTimeMillis();
-      System.out.println("Problem number: " + number);
-      switch (number) {
-         case 1: MultiplesOf.main(null);
-            break;
-         case 2: FibonacciSum.main(null);
-            break;
-         case 3: LargestPrimeFactor.main(null);
-            break;
-         case 4: LargestPalindrome.main(null);
-            break;
-         case 5: SmallestMultiple.main(null);
-            break;
-         case 6: SumSquareDifference.main(null);
-            break;
-         case 7: PrimeNumbers.main(new String[] {"0"});
-            break;
-         case 8: LargestProductSeries.main(null);
-            break;
-         case 9: PythagoreanTriplet.main(null);
-            break;
-         case 10: PrimeNumbers.main(new String[] {"1"});
-            break;
-         case 11: GridProduct.main(null);
-            break;
-         case 12: TriangleNumber.main(null);
-            break;
-         case 13: LargeSum.main(null);
-            break;
-         case 14: LongestCollatz.main(null);
-            break;
-         case 15: LatticePaths.main(null);
-            break;
-         case 16: PowerDigitSum.main(null);
-            break;
-         case 17: NumberLetterCounts.main(new String[] {"1000"});
-            break;
-         case 18: 
-            MaximumPathSum.main(new String[] {"src/problem18/triangle.txt", "15"});
-            System.out.println("Time elapsed: " + (System.currentTimeMillis() - elapsed) + " ms\n");
-            System.out.println("Problem number: 67");
-            MaximumPathSum.main(new String[] {"src/problem18/bigTriangle.txt", "100"});
-            break;
-         case 19: CountingSundays.main(null);
-            break;
-         case 20: FactorialDigitSum.main(null);
-            break;
-         case 21: AmicableNumbers.main(null);
-            break;
-         case 22: NameScores.main(null);
-            break;
-         case 23: NonAbundantSums.main(null);
-            break;
-         case 24: LexicographicPermutations.main(null);
-            break;
-         case 27: QuadraticPrimes.main(null);
-            break;
-         case 28: SpiralDiagonals.main(null);
-            break;
-         case 29: DistinctPowers.main(null);
-            break;
-         case 30: DigitFifthPowers.main(null);
-            break;
-         default:
-            break;
-      }
-      System.out.println("Time elapsed: " + (System.currentTimeMillis() - elapsed) + " ms");
+      o.getClass().getMethod("main", String[].class).invoke(o, (Object) args);
+      System.out.println("Time elapsed: " + (System.currentTimeMillis() - elapsed + 1) + " ms");
    }
 }
