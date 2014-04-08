@@ -1,5 +1,11 @@
 package problem25;
 
+/*
+ 1000-digit Fibonacci number
+ Problem 25
+ What is the first term in the Fibonacci sequence to contain 1000 digits?
+ */
+
 import java.math.BigInteger;
 
 public class Fibonacci1000 {

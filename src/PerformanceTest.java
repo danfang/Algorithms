@@ -29,7 +29,7 @@ import problem27.QuadraticPrimes;
 import problem28.SpiralDiagonals;
 import problem29.DistinctPowers;
 import problem30.DigitFifthPowers;
-import problem43.SubstringDivisibility;
+import problem32.PandigitalProducts;
 
 /*
  This class tests the speed of each algorithm used
@@ -50,7 +50,8 @@ public class PerformanceTest {
          new NameScores(),        new NonAbundantSums(),      new LexicographicPermutations(), 
          new Fibonacci1000(),     null,                       new QuadraticPrimes(), 
          // PROBLEMS 28 - 36
-         new SpiralDiagonals(),   new DistinctPowers(),       new DigitFifthPowers()
+         new SpiralDiagonals(),   new DistinctPowers(),       new DigitFifthPowers(),
+         null,                    new PandigitalProducts()
       };
    
    // indexes correspond to problem number (not 0-based)
@@ -63,9 +64,9 @@ public class PerformanceTest {
    }
    
    public static void main(String[] args) throws Exception {
-      runAll();
+      //runAll();
       //run(15);
-      //run(new SubstringDivisibility(), null);
+      run(new PandigitalProducts(), null);
    }
 
    private static void runAll() throws Exception {
@@ -77,14 +78,9 @@ public class PerformanceTest {
    private static void run(int number) throws Exception {
       if (classes[number - 1] != null) {
          System.out.println("Problem number: " + number);
-         Class<?> c = classes[number - 1].getClass();
-         Method m = c.getMethod("main", String[].class);
+         Method m = classes[number - 1].getClass().getMethod("main", String[].class);
          double elapsed = System.currentTimeMillis();
-         if (arguments[number] == null) {
-            m.invoke(classes[number - 1], (Object) new String[] {});
-         } else {
-            m.invoke(classes[number - 1], (Object) arguments[number]);
-         }
+         m.invoke(classes[number - 1], (Object) arguments[number]);
          System.out.println("Time elapsed: " + (System.currentTimeMillis() - elapsed + 1) + " ms");
          System.out.println();
       }
