@@ -51,6 +51,8 @@ Project Euler done in Java: [Performance Testing](src/PerformanceTest.java) - ad
 
 [Problem 24](src/problem24/LexicographicPermutations.java) - solved 4/6/14
 
+[Problem 25](src/problem25/Fibonacci1000.java) - solved 4/7/14
+
 [Problem 27](src/problem27/QuadraticPrimes.java) - solved 4/6/14
 
 [Problem 28](src/problem28/SpiralDiagonals.java) - solved 4/6/14
@@ -58,3 +60,5 @@ Project Euler done in Java: [Performance Testing](src/PerformanceTest.java) - ad
 [Problem 29](src/problem29/DistinctPowers.java) - solved 4/6/14
 
 [Problem 30](src/problem30/DigitFifthPowers.java) + [Graphical Representation](bin/problem30/Scatterplot Analysis.png) - solved 4/6/14
+
+[Problem 43](src/problem43/SubstringDivisibility.java) - solved 4/7/14
