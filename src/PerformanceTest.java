@@ -30,6 +30,8 @@ import problem28.SpiralDiagonals;
 import problem29.DistinctPowers;
 import problem30.DigitFifthPowers;
 import problem32.PandigitalProducts;
+import problem34.DigitFactorials;
+import problem35.CircularPrimes;
 
 /*
  This class tests the speed of each algorithm used
@@ -51,7 +53,8 @@ public class PerformanceTest {
          new Fibonacci1000(),     null,                       new QuadraticPrimes(), 
          // PROBLEMS 28 - 36
          new SpiralDiagonals(),   new DistinctPowers(),       new DigitFifthPowers(),
-         null,                    new PandigitalProducts()
+         null,                    new PandigitalProducts(),   null,
+         new DigitFactorials(),   new CircularPrimes()
       };
    
    // indexes correspond to problem number (not 0-based)
@@ -64,9 +67,8 @@ public class PerformanceTest {
    }
    
    public static void main(String[] args) throws Exception {
-      //runAll();
-      //run(15);
-      run(new PandigitalProducts(), null);
+      runAll();
+      //run(35);
    }
 
    private static void runAll() throws Exception {

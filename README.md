@@ -63,4 +63,8 @@ Project Euler done in Java: [Performance Testing](src/PerformanceTest.java)
 
 [Problem 32](src/problem32/PandigitalProducts.java) - solved 4/8/14
 
+[Problem 34](src/problem34/DigitFactorials.java) - solved 4/8/14
+
+[Problem 35](src/problem35/CircularPrimes.java) + [Sieve of Eratosthenes](src/problem35/SieveEratosthenes.java) - solved 4/8/14
+
 [Problem 43](src/problem43/SubstringDivisibility.java) - solved 4/7/14
