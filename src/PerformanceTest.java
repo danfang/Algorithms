@@ -67,8 +67,8 @@ public class PerformanceTest {
    }
    
    public static void main(String[] args) throws Exception {
-      runAll();
-      //run(35);
+      //runAll();
+      run(35);
    }
 
    private static void runAll() throws Exception {
