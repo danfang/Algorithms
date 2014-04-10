@@ -29,9 +29,6 @@ public class LargestPalindrome {
       for (int i = s.length() - 1; i >= 0; i--) {
          s2 += s.charAt(i);
       }
-      if (s2.equals(s)) {
-         return true;
-      }
-      return false;
+      return (s2.equals(s));
    }
 }
