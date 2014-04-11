@@ -41,5 +41,16 @@ public class DigitFactorials {
       }
       System.out.println(sum);
    }
+   
+   public static int factorial(int number) {
+      if (number == 0) {
+         return 1;
+      }
+      int value = 1;
+      while (number != 1) {
+         value *= number--;
+      }
+      return value;
+   }
 
 }

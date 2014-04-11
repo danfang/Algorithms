@@ -1,5 +1,10 @@
 package problem24;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import problem34.DigitFactorials;
+
 /*
  Lexicographic permutations
  Problem 24
