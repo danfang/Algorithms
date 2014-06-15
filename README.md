@@ -76,3 +76,5 @@ Project Euler done in Java: [Performance Testing](src/PerformanceTest.java)
 38. [Pandigital multiples](src/problem38/PandigitalMultiples.java) - solved 4/11/14
 
 43. [Sub-string divisibilty](src/problem43/SubstringDivisibility.java) - solved 4/7/14
+
+54. [Poker hands](src/problem54/HandParser.java) - solve 6/14/14

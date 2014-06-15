@@ -36,6 +36,7 @@ import problem35.CircularPrimes;
 import problem36.DoubleBasePalindromes;
 import problem37.TruncatablePrimes;
 import problem38.PandigitalMultiples;
+import problem54.HandParser;
 
 /*
  This class tests the speed of each algorithm used
@@ -74,7 +75,8 @@ public class PerformanceTest {
    
    public static void main(String[] args) throws Exception {
       //runAll();
-      run(38);
+      //run(5);
+      //run(new HandParser(), new String[]{});
    }
 
    private static void runAll() throws Exception {
