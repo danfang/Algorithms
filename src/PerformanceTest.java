@@ -74,7 +74,7 @@ public class PerformanceTest {
    }
    
    public static void main(String[] args) throws Exception {
-      //runAll();
+      runAll();
       //run(5);
       //run(new HandParser(), new String[]{});
    }
